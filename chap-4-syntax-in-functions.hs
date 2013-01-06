@@ -54,3 +54,23 @@ ampm time
   where hours = read (take 2 time)
 
 -- Let it be
+
+-- Calculate the area of a circle, pi*radius^2, using a let expression to
+-- set pi to 3.14159
+
+area :: Float -> Float
+area r = let pi = 3.14159 in pi * r ^ 2
+
+-- Case expressions
+
+-- Create a function, constant, that returns the natural constant given
+-- it's name. Use case expressions. E.g.: constant "pi" -> 3.14159.
+-- Names and values:
+--   pi   = 3.14159
+--   e    = 2.71828
+--   gold = 1.61803
+
+constant :: String -> Double
+constant s = case s of "pi"   -> 3.14159
+                       "e"    -> 2.71828
+                       "gold" -> 1.61803
